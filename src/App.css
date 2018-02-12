@@ -16,9 +16,7 @@ h2 {
 /* LANDING */
 
 .logo {
-  width: 50%;
-  min-width: 20%;
-  margin-bottom: -2em;
+  margin-top: -0.4em;
   position: fixed;
   z-index: 3;
 }

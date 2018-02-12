@@ -8,7 +8,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      logoWidth: 50,
+      logoHeight: 40,
       navBarOpacity: 0
     }
 
@@ -26,15 +26,11 @@ class App extends Component {
     let X = window.innerHeight
     if (window.scrollY > Y) {
       // if(window.scrollY) {
-      while (this.state.logoWidth > 20) {
-        // console.log('haha');
-        this.setState({logoWidth: this.state.logoWidth - 1})
-
-      }
-        // console.log(this.state.logoWidth);
+      this.setState({logoHeight: 175})
+        // console.log(this.state.logoHeight);
       // }
     } else {
-      this.setState({logoWidth: 50})
+      this.setState({logoHeight: 40})
     }
   }
 
@@ -50,7 +46,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Landing logoWidth={this.state.logoWidth} navBarOpacity={this.state.navBarOpacity} />
+        <Landing logoHeight={this.state.logoHeight} navBarOpacity={this.state.navBarOpacity} />
         <AboutMe />
       </div>
     );
