@@ -20,13 +20,14 @@ h2 {
   min-width: 20%;
   margin-bottom: -2em;
   position: fixed;
+  z-index: 3;
 }
 
 .nameTitle {
   width: 100%;
   height: inherit;
   position: fixed;
-  z-index: -2;
+  z-index: -1;
   left: 1em;
   display: flex;
   flex-direction: column;
@@ -48,7 +49,31 @@ h2 {
   width: 100%;
   position: fixed;
   right: 0;
-  z-index: -3;
+  z-index: -2;
+}
+
+.links {
+  font-family: 'Shadows Into Light', cursive;
+  position: fixed;
+  width: 80%;
+  bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.icons {
+  width: 50px;
+  margin-top: 23px;
+  transition: width 2s, background-color 2s, border-radius 2s, margin-top 2s;
+}
+
+.icons:hover {
+  width: 65px;
+  background-color: tan;
+  border-radius: 1em;
+  margin-top: 15px;
 }
 
 /* ABOUT ME */
@@ -59,7 +84,7 @@ h2 {
   position: absolute;
   left: 0;
   margin-top: -1em;
-  z-index: -2;
+  z-index: 0;
 }
 
 .aboutSection {
@@ -74,20 +99,21 @@ h2 {
   font-family: 'Open Sans', sans-serif;
   padding: 2em;
   text-align: left;
-  z-index: -1;
+  z-index: 1;
 }
 
 /* NAVIGATION */
 
 .navigation {
-  background-color: rgba(100, 100, 100, 0);
+  background-color: rgba(100, 100, 100, 0.8);
+  display: none;
   position: fixed;
   font-family: 'Shadows Into Light', cursive;
   width: 100%;
   height: 75px;
-  display: flex;
   align-content: center;
   justify-content: space-between;
+  z-index: 2
 }
 
 .navLeft  {
@@ -96,22 +122,29 @@ h2 {
 }
 
 .navRight  {
-  margin-right: 1em;
   margin-top: -10px;
-
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 a {
   text-decoration: none;
 }
+
 a p {
+  font-size: .8em;
+}
+
+a p, a h3{
   padding-left: 10px;
   padding-right: 5px;
   color: white;
-  font-size: .8em;
+  letter-spacing: normal;
   transition: letter-spacing 2s, background-color 2s, border-radius 2s;
 }
 
-a:hover p:hover {
+a:hover p:hover, a:hover h3:hover {
   letter-spacing: 0.25em;
   background-color: tan;
   border-radius: 1em;

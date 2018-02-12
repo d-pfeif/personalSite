@@ -41,9 +41,9 @@ class App extends Component {
   navBarChange() {
     let Y = window.innerHeight / 1.75
     if (window.scrollY > Y) {
-      this.setState({navBarOpacity: 0.8})
+      this.setState({navBarOpacity: 'flex'})
     } else {
-      this.setState({navBarOpacity: 0})
+      this.setState({navBarOpacity: 'none'})
     }
   }
 
