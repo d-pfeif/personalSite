@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+
+// import components
 import AboutMe from "./components/aboutMe.js"
 import Landing from "./components/landing.js"
+import Projects from "./components/projects.js"
 
 class App extends Component {
   constructor(props) {
@@ -48,6 +51,7 @@ class App extends Component {
       <div className="App">
         <Landing logoHeight={this.state.logoHeight} navBarOpacity={this.state.navBarOpacity} />
         <AboutMe />
+        <Projects />
       </div>
     );
   }

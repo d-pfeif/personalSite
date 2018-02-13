@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import myFace from '../assets/myFace.jpg'
-
+import myFace from '../assets/myFace.png'
 
 class AboutMe extends Component {
   render(){

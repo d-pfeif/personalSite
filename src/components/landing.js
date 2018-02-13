@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+
+// import components
+import NavBar from "./navbar.js"
+
+// import assets
 import logo from "../assets/logo.png"
 import chalk from "../assets/chalkboard-background.jpg"
-import NavBar from "./navbar.js"
 import resume from "../assets/DakotaPfeifer-resume.pdf"
 import gitHub from "../assets/github.png"
 import linkedIn from "../assets/linkedin.png"
