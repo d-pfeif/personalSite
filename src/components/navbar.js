@@ -6,7 +6,7 @@ import linkedIn from "../assets/linkedin.png"
 class NavBar extends Component {
   render(){
     return(
-      <div className="navigation" style={{display: this.props.navBarOpacity}}>
+      <div className="navigation" style={{marginTop: this.props.navBarMarginTop+"em"}}>
         <div className="navLeft">
           <p></p>
         </div>

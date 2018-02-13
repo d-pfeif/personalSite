@@ -12,7 +12,7 @@ class App extends Component {
 
     this.state = {
       logoHeight: 40,
-      navBarOpacity: 0
+      navBarMarginTop: 0
     }
 
     this.logoSizeChange = this.logoSizeChange.bind(this)
@@ -40,16 +40,16 @@ class App extends Component {
   navBarChange() {
     let Y = window.innerHeight / 1.75
     if (window.scrollY > Y) {
-      this.setState({navBarOpacity: 'flex'})
+      this.setState({navBarMarginTop: 0})
     } else {
-      this.setState({navBarOpacity: 'none'})
+      this.setState({navBarMarginTop: -5})
     }
   }
 
   render() {
     return (
       <div className="App">
-        <Landing logoHeight={this.state.logoHeight} navBarOpacity={this.state.navBarOpacity} />
+        <Landing logoHeight={this.state.logoHeight} navBarMarginTop={this.state.navBarMarginTop} />
         <AboutMe />
         <Projects />
       </div>
