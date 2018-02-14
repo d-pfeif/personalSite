@@ -12,16 +12,19 @@ class App extends Component {
 
     this.state = {
       logoHeight: 40,
-      navBarMarginTop: 0
+      navBarMarginTop: 0,
+      landingLinkDisplay: 'flex'
     }
 
     this.logoSizeChange = this.logoSizeChange.bind(this)
     this.navBarChange = this.navBarChange.bind(this)
+    this.landingLinksChange = this.landingLinksChange.bind(this)
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.logoSizeChange)
     window.addEventListener('scroll', this.navBarChange)
+    window.addEventListener('scroll', this.landingLinksChange)
   }
 
   logoSizeChange() {
@@ -46,10 +49,19 @@ class App extends Component {
     }
   }
 
+  landingLinksChange() {
+    let Y = window.innerHeight / 1.75
+    if (window.scrollY > Y) {
+      this.setState({landingLinkDisplay: 'none'})
+    } else {
+      this.setState({landingLinkDisplay: 'flex'})
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <Landing logoHeight={this.state.logoHeight} navBarMarginTop={this.state.navBarMarginTop} />
+        <Landing logoHeight={this.state.logoHeight} navBarMarginTop={this.state.navBarMarginTop} landingLinkDisplay={this.state.landingLinkDisplay} />
         <AboutMe />
         <Projects />
       </div>

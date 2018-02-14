@@ -22,7 +22,7 @@ class Landing extends Component {
           <h1>Dakota Pfeifer</h1>
           <h2>Software Developer</h2>
         </div>
-        <div className="links">
+        <div className="links" style={{display: this.props.landingLinkDisplay}}>
           <a href="https://www.linkedin.com/in/d-pfeif/" target="_blank"><img className="icons" src={linkedIn} /></a>
           <a href="https://github.com/d-pfeif" target="_blank"><img className="icons" src={gitHub} /></a>
           <a href={resume} download><h3>Resume</h3></a>
