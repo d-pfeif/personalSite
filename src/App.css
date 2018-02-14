@@ -165,7 +165,7 @@ a:hover p:hover, a:hover h3:hover {
 
 /* PROJECTS */
 
-.projects {
+#projects {
   color: white;
   background: url('./assets/projectsBackground.jpg') no-repeat center center fixed;
   background-size: cover;

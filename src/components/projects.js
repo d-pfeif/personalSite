@@ -12,7 +12,7 @@ import ProjectSlides from './projectSlides.js'
 class Projects extends Component {
   render(){
     return(
-      <div className="projects">
+      <div id="projects">
         <h1 style={{marginRight: 15+'em', marginTop: 4+'em'}}>Projects</h1>
         <div className="projSlideL" style={{marginLeft: this.props.margin1 + "em"}}>
           <ProjectSlides logo={myViewport} title="MyViewport" description="Built with a Raspberry Pi and integrated with Alexa, this is a smart mirror designed for you!" urllink="https://www.youtube.com/watch?v=-42N0AdAzV8" gitlink="https://github.com/d-pfeif/mySmartMirror"/>

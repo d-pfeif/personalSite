@@ -4,11 +4,16 @@ import gitHub from "../assets/github.png"
 import linkedIn from "../assets/linkedin.png"
 
 class NavBar extends Component {
+  goToProjects() {
+    console.log('hello');
+    window.scrollY = window.innerHeight * 2
+  }
+
   render(){
     return(
       <div className="navigation" style={{marginTop: this.props.navBarMarginTop+"em"}}>
         <div className="navLeft">
-          <p></p>
+          <a href="#projects"><p>Projects</p></a>
         </div>
         <div className="navRight">
           <a href="https://www.linkedin.com/in/d-pfeif/" target="_blank"><img className="icons" src={linkedIn} /></a>
