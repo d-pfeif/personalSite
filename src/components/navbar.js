@@ -13,6 +13,7 @@ class NavBar extends Component {
     return(
       <div className="navigation" style={{marginTop: this.props.navBarMarginTop+"em"}}>
         <div className="navLeft">
+          <a href="#landing"><p>Back</p></a>
           <a href="#projects"><p>Projects</p></a>
           <a href="#tech"><p>Technology</p></a>
         </div>

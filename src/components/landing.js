@@ -14,9 +14,8 @@ import arrow from "../assets/rightarrow.png"
 class Landing extends Component {
 
   render(){
-    // console.log("landing page ", this.props.logoHeight);
     return(
-      <div className="landing">
+      <div id="landing">
         <NavBar navBarMarginTop={this.props.navBarMarginTop} />
         <img src={chalk} className="chalkboard"/>
         <img style={this.props.logoHeight < 100 ? {height: this.props.logoHeight +"%"} : {height: this.props.logoHeight + "px"}} src={logo} className="logo"/>

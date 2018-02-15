@@ -24,7 +24,6 @@ class App extends Component {
     }
 
     this.logoSizeChange = this.logoSizeChange.bind(this)
-    this.navBarChange = this.navBarChange.bind(this)
     this.landingLinksChange = this.landingLinksChange.bind(this)
     this.projectFlyIn1 = this.projectFlyIn1.bind(this)
     this.projectFlyIn2 = this.projectFlyIn2.bind(this)
@@ -35,7 +34,6 @@ class App extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.logoSizeChange)
-    window.addEventListener('scroll', this.navBarChange)
     window.addEventListener('scroll', this.landingLinksChange)
     window.addEventListener('scroll', this.projectFlyIn1)
     window.addEventListener('scroll', this.projectFlyIn2)
@@ -48,21 +46,9 @@ class App extends Component {
     let Y = window.innerHeight / 1.75
     let X = window.innerHeight
     if (window.scrollY > Y) {
-      // if(window.scrollY) {
-      this.setState({logoHeight: 175, arrowDisplay: 'none'})
-        // console.log(this.state.logoHeight);
-      // }
+      this.setState({logoHeight: 175, arrowDisplay: 'none', navBarMarginTop: 0})
     } else {
-      this.setState({logoHeight: 40, arrowDisplay: 'block'})
-    }
-  }
-
-  navBarChange() {
-    let Y = window.innerHeight / 1.75
-    if (window.scrollY > Y) {
-      this.setState({navBarMarginTop: 0})
-    } else {
-      this.setState({navBarMarginTop: -5})
+      this.setState({logoHeight: 40, arrowDisplay: 'block', navBarMarginTop: -5})
     }
   }
 
@@ -80,10 +66,8 @@ class App extends Component {
     let Y = window.innerHeight * multiplier
     if (window.scrollY > Y) {
       this.setState({project1Margin: 0})
-      // console.log(multiplier);
     } else {
       this.setState({project1Margin: -150})
-      // multiplier = multiplier - 0.5
     }
   }
 
@@ -92,10 +76,8 @@ class App extends Component {
     let Y = window.innerHeight * multiplier
     if (window.scrollY > Y) {
       this.setState({project2Margin: 0})
-      // console.log(multiplier);
     } else {
       this.setState({project2Margin: -150})
-      // multiplier = multiplier - 0.5
     }
   }
 
@@ -104,10 +86,8 @@ class App extends Component {
     let Y = window.innerHeight * multiplier
     if (window.scrollY > Y) {
       this.setState({project3Margin: 0})
-      // console.log(multiplier);
     } else {
       this.setState({project3Margin: -150})
-      // multiplier = multiplier - 0.5
     }
   }
 
@@ -116,10 +96,8 @@ class App extends Component {
     let Y = window.innerHeight * multiplier
     if (window.scrollY > Y) {
       this.setState({project4Margin: 0})
-      // console.log(multiplier);
     } else {
       this.setState({project4Margin: -150})
-      // multiplier = multiplier - 0.5
     }
   }
 

@@ -8,7 +8,8 @@ class Rain extends Component {
       logo: this.props.logo
     }
   }
-  
+
+
   render(){
     return(
       <div>
