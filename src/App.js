@@ -18,7 +18,9 @@ class App extends Component {
       project1Margin: -150,
       project2Margin: -150,
       project3Margin: -150,
-      project4Margin: -150
+      project4Margin: -150,
+      rainDisplay: 'none',
+      arrowDisplay: 'block'
     }
 
     this.logoSizeChange = this.logoSizeChange.bind(this)
@@ -28,6 +30,7 @@ class App extends Component {
     this.projectFlyIn2 = this.projectFlyIn2.bind(this)
     this.projectFlyIn3 = this.projectFlyIn3.bind(this)
     this.projectFlyIn4 = this.projectFlyIn4.bind(this)
+    this.displayRain = this.displayRain.bind(this)
   }
 
   componentDidMount() {
@@ -38,6 +41,7 @@ class App extends Component {
     window.addEventListener('scroll', this.projectFlyIn2)
     window.addEventListener('scroll', this.projectFlyIn3)
     window.addEventListener('scroll', this.projectFlyIn4)
+    window.addEventListener('scroll', this.displayRain)
   }
 
   logoSizeChange() {
@@ -45,11 +49,11 @@ class App extends Component {
     let X = window.innerHeight
     if (window.scrollY > Y) {
       // if(window.scrollY) {
-      this.setState({logoHeight: 175})
+      this.setState({logoHeight: 175, arrowDisplay: 'none'})
         // console.log(this.state.logoHeight);
       // }
     } else {
-      this.setState({logoHeight: 40})
+      this.setState({logoHeight: 40, arrowDisplay: 'block'})
     }
   }
 
@@ -119,13 +123,23 @@ class App extends Component {
     }
   }
 
+  displayRain() {
+    let multiplier = 3.5
+    let Y = window.innerHeight * multiplier
+    if (window.scrollY > Y) {
+      this.setState({rainDisplay: 'flex'})
+    } else {
+      this.setState({rainDisplay: 'none'})
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <Landing logoHeight={this.state.logoHeight} navBarMarginTop={this.state.navBarMarginTop} landingLinkDisplay={this.state.landingLinkDisplay} />
+        <Landing logoHeight={this.state.logoHeight} navBarMarginTop={this.state.navBarMarginTop} landingLinkDisplay={this.state.landingLinkDisplay} arrowDisplay={this.state.arrowDisplay}/>
         <AboutMe />
-        <Projects margin1={this.state.project1Margin} margin2={this.state.project2Margin} margin3={this.state.project3Margin} margin4={this.state.project4Margin}/>
-        <Technologies />
+        <Projects margin1={this.state.project1Margin} margin2={this.state.project2Margin} margin3={this.state.project3Margin} margin4={this.state.project4Margin} />
+        <Technologies rainDisplay={this.state.rainDisplay} />
       </div>
     );
   }

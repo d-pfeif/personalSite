@@ -19,7 +19,28 @@ import alexa from '../assets/tech/alexa.png'
 import aLeft from '../assets/leftarrow.png'
 import aRight from '../assets/rightarrow.png'
 
+// import components
+import Rain from './rain.js'
+
 class Technologies extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      queue: [python, javascript, angularjs, react, nodejs, express, hbs, knex, pg, sql, html, css, pi, apache, alexa],
+      rain: ["rain1", "rain2", "rain3", "rain4"]
+    }
+  }
+
+  randomLogo(){
+    let logo = this.state.queue[Math.floor(Math.random()*this.state.queue.length)]
+    return logo
+  }
+
+  randomRain(){
+    let rain = this.state.rain[Math.floor(Math.random()*this.state.rain.length)]
+    return rain
+  }
+
   render(){
     return(
       <div id="tech">
@@ -44,6 +65,52 @@ class Technologies extends Component {
             <img className="technologies" src={alexa} alt="Amazon Alexa" />
           </div>
           <img className="arrow" src={aRight} alt="Right Arrow" />
+        </div>
+        <div id="techRain">
+          <div id="rainArea" style={{display: this.props.rainDisplay}}>
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+            <Rain rain={this.randomRain()} logo={this.randomLogo()} />
+          </div>
         </div>
       </div>
     )

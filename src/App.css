@@ -138,12 +138,7 @@ h2 {
   font-family: 'Shadows Into Light', cursive;
 }
 
-.navLeft  {
-  margin-left: 1em;
-  margin-top: -10px;
-}
-
-.navRight  {
+.navRight, .navLeft  {
   margin-top: -10px;
   width: 40%;
   display: flex;
@@ -250,7 +245,7 @@ a:hover p:hover, a:hover h3:hover {
   height: inherit;
 }
 
-#techArea {
+#techArea, #techRain {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -260,6 +255,37 @@ a:hover p:hover, a:hover h3:hover {
   width: 50px;
 }
 
+#techRain {
+  width: 100%;
+}
+
+#rainArea {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.rain1 {
+  width: 30px;
+  animation: rain 1.5s linear infinite;
+}
+
+.rain2 {
+  width: 30px;
+  animation: rain2 1.60s linear infinite;
+}
+
+.rain3 {
+  width: 30px;
+  animation: rain3 1.7s linear infinite;
+}
+
+.rain4 {
+  width: 30px;
+  animation: rain4 1.45s linear infinite;
+}
+
 /* ANIMATIONS */
 @keyframes float {
   0% {
@@ -267,5 +293,61 @@ a:hover p:hover, a:hover h3:hover {
   }
   100% {
     bottom: 1em;
+  }
+}
+
+@keyframes rain {
+  0% {
+    margin-top: -1em;
+  }
+  80% {
+    opacity: 1
+  }
+  100% {
+    margin-top: 13em;
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rain2 {
+  0% {
+    margin-top: -1em;
+  }
+  80% {
+    opacity: 1
+  }
+  100% {
+    margin-top: 10em;
+    opacity: 0;
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rain3 {
+  0% {
+    margin-top: -1em;
+  }
+  80% {
+    opacity: 1
+  }
+  100% {
+    margin-top: 18em;
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rain4 {
+  0% {
+    margin-top: -1em;
+  }
+  80% {
+    opacity: 1
+  }
+  100% {
+    margin-top: 15em;
+    opacity: 0;
+    transform: rotate(-180deg);
   }
 }

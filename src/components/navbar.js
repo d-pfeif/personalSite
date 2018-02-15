@@ -14,6 +14,7 @@ class NavBar extends Component {
       <div className="navigation" style={{marginTop: this.props.navBarMarginTop+"em"}}>
         <div className="navLeft">
           <a href="#projects"><p>Projects</p></a>
+          <a href="#tech"><p>Technology</p></a>
         </div>
         <div className="navRight">
           <a href="https://www.linkedin.com/in/d-pfeif/" target="_blank"><img className="icons" src={linkedIn} /></a>
