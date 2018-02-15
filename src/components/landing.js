@@ -9,6 +9,7 @@ import chalk from "../assets/chalkboard-background.jpg"
 import resume from "../assets/DakotaPfeifer-resume.pdf"
 import gitHub from "../assets/github.png"
 import linkedIn from "../assets/linkedin.png"
+import arrow from "../assets/rightarrow.png"
 
 class Landing extends Component {
   render(){
@@ -28,6 +29,9 @@ class Landing extends Component {
           <a href="https://github.com/d-pfeif" target="_blank"><img className="icons" src={gitHub} /></a>
           <a href={resume} download><h3>Resume</h3></a>
         </div>
+        <img className="downArrow" src={arrow} alt="arrow" />
+        <img className="downArrow" src={arrow} style={{left: 10 + "em"}} alt="arrow" />
+        <img className="downArrow" src={arrow} style={{right: 10 + "em"}} alt="arrow" />
       </div>
     )
   }

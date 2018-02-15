@@ -82,7 +82,7 @@ h2 {
 
 /* ABOUT ME */
 
-.about {
+.about, .tech{
   height: -webkit-fill-available;
   background: rgb(160, 200, 240);
   z-index: 0;
@@ -107,6 +107,16 @@ h2 {
   border-radius: 0.5em;
   padding: 2em;
   z-index: 0;
+}
+
+.downArrow {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  z-index: -2;
+  transform: rotate(90deg);
+  animation: float 1s ease-in-out alternate infinite;
 }
 
 /* NAVIGATION */
@@ -217,4 +227,45 @@ a:hover p:hover, a:hover h3:hover {
   display: flex;
   flex-direction: row;
   margin-top: -2em;
+}
+
+/* TECHNOLOGIES */
+#tech {
+  background: url('./assets/denverSkyline.jpg') no-repeat center center;
+  height: 100vh;
+  border-radius: 1em;
+  padding: 1em;
+  left: 0;
+}
+
+.techList {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  height: 100px;
+  border: dotted 5px black;
+}
+
+.technologies {
+  height: inherit;
+}
+
+#techArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  width: 50px;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+  0% {
+    bottom: 0em;
+  }
+  100% {
+    bottom: 1em;
+  }
 }

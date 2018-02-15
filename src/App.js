@@ -5,6 +5,7 @@ import './App.css';
 import AboutMe from "./components/aboutMe.js"
 import Landing from "./components/landing.js"
 import Projects from "./components/projects.js"
+import Technologies from "./components/technologies.js"
 
 class App extends Component {
   constructor(props) {
@@ -124,6 +125,7 @@ class App extends Component {
         <Landing logoHeight={this.state.logoHeight} navBarMarginTop={this.state.navBarMarginTop} landingLinkDisplay={this.state.landingLinkDisplay} />
         <AboutMe />
         <Projects margin1={this.state.project1Margin} margin2={this.state.project2Margin} margin3={this.state.project3Margin} margin4={this.state.project4Margin}/>
+        <Technologies />
       </div>
     );
   }
