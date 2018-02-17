@@ -92,6 +92,7 @@ h2 {
 .myFace {
   right: 0;
   /* height: -webkit-fill-available;*/
+  background-color: rgb(160, 200, 240);
   height: 100vh;
   height: -moz-available;
   border-radius: 1em;
