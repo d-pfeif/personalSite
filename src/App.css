@@ -82,7 +82,8 @@ h2 {
 /* ABOUT ME */
 
 .about, .tech{
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
+  height: 100vh;
   background: rgb(160, 200, 240);
   z-index: 0;
   border-radius: 1em;
@@ -90,7 +91,9 @@ h2 {
 
 .myFace {
   right: 0;
-  height: inherit;
+  /* height: -webkit-fill-available;*/
+  height: 100vh;
+  height: -moz-available;
   border-radius: 1em;
   position: absolute;
 }
@@ -225,7 +228,7 @@ a:hover p:hover, a:hover h3:hover {
 
 /* TECHNOLOGIES */
 #tech {
-  background: url('./assets/denverSkyline.jpg') no-repeat center center;
+  background: url('./assets/denverSkyline.jpg') no-repeat center center/cover;
   height: 100vh;
   border-radius: 1em;
   padding: 1em;

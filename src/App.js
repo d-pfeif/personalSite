@@ -102,7 +102,7 @@ class App extends Component {
   }
 
   displayRain() {
-    let multiplier = 3.5
+    let multiplier = 3.1
     let Y = window.innerHeight * multiplier
     if (window.scrollY > Y) {
       this.setState({rainDisplay: 'flex'})
