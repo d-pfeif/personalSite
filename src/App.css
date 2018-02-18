@@ -1,356 +1,515 @@
-.App {
-  text-align: center;
-}
-
-p {
-  font-family: 'Open Sans', sans-serif;
-  text-align: left;
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: 'Shadows Into Light', cursive;
-  letter-spacing: 1em;
-  text-align: center;
-}
-
-h2 {
-  letter-spacing: 0.75em;
-  margin-top: -1em;
-}
-
-/* LANDING */
-
-.logo {
-  margin-top: -0.4em;
-  position: fixed;
-  z-index: 3;
-  transition: height 0.5s;
-}
-
-.nameTitle {
-  width: 100%;
-  height: inherit;
-  position: fixed;
-  z-index: -1;
-  left: 1em;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
-
-#landing {
-  height: 100vh;
-  width: 100%;
-  color: white;
-  font-size: 2em;
-  display: flex;
-  justify-content: center;
-}
-
-.chalkboard {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  right: 0;
-  z-index: -2;
-}
-
-.links {
-  font-family: 'Shadows Into Light', cursive;
-  position: fixed;
-  width: 80%;
-  bottom: 1em;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-around;
-}
-
-.icons {
-  width: 50px;
-  margin-top: 23px;
-  transition: width 2s, background-color 2s, border-radius 2s, margin-top 2s;
-}
-
-.icons:hover {
-  width: 65px;
-  background-color: tan;
-  border-radius: 1em;
-  margin-top: 15px;
-}
-
-/* ABOUT ME */
-
-.about, .tech{
-  /* height: -webkit-fill-available; */
-  height: 100vh;
-  background: rgb(160, 200, 240);
-  z-index: 0;
-  border-radius: 1em;
-}
-
-.myFace {
-  right: 0;
-  /* height: -webkit-fill-available;*/
-  background-color: rgb(160, 200, 240);
-  height: 100vh;
-  height: -moz-available;
-  border-radius: 1em;
-  position: absolute;
-}
-
-.aboutSection {
-  width: 35%;
-  max-height: 26em;
-  overflow: scroll;
-  background-color: rgba(255, 255, 255, 0.8);
-  position: relative;
-  top: 3em;
-  left: 2em;
-  border-radius: 0.5em;
-  padding: 2em;
-  z-index: 0;
-}
-
-.downArrow {
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  bottom: 0;
-  z-index: -2;
-  transform: rotate(90deg);
-  animation: float 1s ease-in-out alternate infinite;
-}
-
-/* NAVIGATION */
-
-.navigation {
-  background-color: rgba(100, 100, 100, 0.8);
-  display: flex;
-  position: fixed;
-  width: 100%;
-  height: 75px;
-  align-content: center;
-  justify-content: space-between;
-  z-index: 3;
-  margin-top: -5em;
-  transition: margin-top 0.5s;
-}
-
-.navigation p {
-  font-family: 'Shadows Into Light', cursive;
-}
-
-.navRight, .navLeft  {
-  margin-top: -10px;
-  width: 40%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-a {
-  text-decoration: none;
-}
-
-a p {
-  font-size: .8em;
-}
-
-a p, a h3{
-  padding-left: 10px;
-  padding-right: 5px;
-  color: white;
-  letter-spacing: normal;
-  transition: letter-spacing 2s, background-color 2s, border-radius 2s;
-}
-
-a:hover p:hover, a:hover h3:hover {
-  letter-spacing: 0.25em;
-  background-color: tan;
-  border-radius: 1em;
-}
-
-/* PROJECTS */
-
-#projects {
-  color: white;
-  background: url('./assets/projectsBackground.jpg') no-repeat center center fixed;
-  background-size: cover;
-  background-position: bottom;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.projSlideL, .projSlideR {
-  height: 50%;
-  width: 70%;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 2em;
-  border-radius: 0.5em;
-  margin-bottom: 2em;
-}
-
-.projSlideL {
-  transition: margin-left 2s;
-}
-
-.projSlideR {
-  transition: margin-right 2s;
-}
-
-.projArea {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: black;
-}
-
-.projLogo {
-  width: 200px;
-  height: 200px;
-}
-
-.projInfo {
-  width: 40%;
-}
-
-.projInfo a h3{
-  color: black;
-  width: 8em;
-}
-
-.projLinks {
-  display: flex;
-  flex-direction: row;
-  margin-top: -2em;
-}
-
-/* TECHNOLOGIES */
-#tech {
-  background: url('./assets/denverSkyline.jpg') no-repeat center center/cover;
-  height: 100vh;
-  border-radius: 1em;
-  padding: 1em;
-  left: 0;
-}
-
-.techList {
-  display: flex;
-  align-items: center;
-  overflow-x: auto;
-  height: 100px;
-  border: dotted 5px black;
-}
-
-.technologies {
-  height: inherit;
-}
-
-#techArea, #techRain {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.arrow {
-  width: 50px;
-}
-
-#techRain {
-  width: 100%;
-}
-
-#rainArea {
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-}
-
-.rain1 {
-  width: 30px;
-  animation: rain 1.5s linear infinite;
-}
-
-.rain2 {
-  width: 30px;
-  animation: rain2 1.60s linear infinite;
-}
-
-.rain3 {
-  width: 30px;
-  animation: rain3 1.7s linear infinite;
-}
-
-.rain4 {
-  width: 30px;
-  animation: rain4 1.45s linear infinite;
-}
-
-/* ANIMATIONS */
-@keyframes float {
-  0% {
-    bottom: 0em;
+@media only screen and (min-width: 1025px) {
+  .App {
+    text-align: center;
   }
-  100% {
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 1em;
+    text-align: center;
+  }
+
+  h2 {
+    letter-spacing: 0.75em;
+    margin-top: -1em;
+  }
+
+  /* LANDING */
+
+  .logo {
+    margin-top: -0.4em;
+    position: fixed;
+    z-index: 3;
+    transition: height 0.5s;
+  }
+
+  .nameTitle {
+    width: 100%;
+    height: inherit;
+    position: fixed;
+    z-index: -1;
+    left: 1em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #landing {
+    height: 100vh;
+    width: 100%;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .chalkboard {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    z-index: -2;
+  }
+
+  .links {
+    font-family: 'Shadows Into Light', cursive;
+    position: fixed;
+    width: 80%;
     bottom: 1em;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
   }
+
+  .icons {
+    width: 50px;
+    margin-top: 23px;
+    transition: width 2s, background-color 2s, border-radius 2s, margin-top 2s;
+  }
+
+  .icons:hover {
+    width: 65px;
+    background-color: tan;
+    border-radius: 1em;
+    margin-top: 15px;
+  }
+
+  /* ABOUT ME */
+
+  .about, .tech{
+    /* height: -webkit-fill-available; */
+    height: 100vh;
+    background: rgb(160, 200, 240);
+    z-index: 0;
+    border-radius: 1em;
+  }
+
+  .myFace {
+    right: 0;
+    /* height: -webkit-fill-available;*/
+    background-color: rgb(160, 200, 240);
+    height: 100vh;
+    /* height: -moz-available; */
+    border-radius: 1em;
+    position: absolute;
+  }
+
+  .aboutSection {
+    width: 35%;
+    max-height: 26em;
+    overflow: scroll;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    top: 3em;
+    left: 2em;
+    border-radius: 0.5em;
+    padding: 2em;
+    z-index: 0;
+  }
+
+  .downArrow {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    z-index: -2;
+    transform: rotate(90deg);
+    animation: float 1s ease-in-out alternate infinite;
+  }
+
+  /* NAVIGATION */
+
+  .navigation {
+    background-color: rgba(100, 100, 100, 0.8);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    align-content: center;
+    justify-content: space-between;
+    z-index: 3;
+    margin-top: -5em;
+    transition: margin-top 0.5s;
+  }
+
+  .navigation p {
+    font-family: 'Shadows Into Light', cursive;
+  }
+
+  .navRight, .navLeft  {
+    margin-top: -10px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a p {
+    font-size: .8em;
+  }
+
+  a p, a h3{
+    padding-left: 10px;
+    padding-right: 5px;
+    color: white;
+    letter-spacing: normal;
+    transition: letter-spacing 2s, background-color 2s, border-radius 2s;
+  }
+
+  a:hover p:hover, a:hover h3:hover {
+    letter-spacing: 0.25em;
+    background-color: tan;
+    border-radius: 1em;
+  }
+
+  /* PROJECTS */
+
+  #projects {
+    color: white;
+    background: url('./assets/projectsBackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .projSlideL, .projSlideR {
+    height: 50%;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 2em;
+    border-radius: 0.5em;
+    margin-bottom: 2em;
+  }
+
+  .projSlideL {
+    transition: margin-left 2s;
+  }
+
+  .projSlideR {
+    transition: margin-right 2s;
+  }
+
+  .projArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: black;
+  }
+
+  .projLogo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .projInfo {
+    width: 40%;
+  }
+
+  .projInfo a h3{
+    color: black;
+    width: 8em;
+  }
+
+  .projLinks {
+    display: flex;
+    flex-direction: row;
+    margin-top: -2em;
+  }
+
+  /* TECHNOLOGIES */
+  #tech {
+    background: url('./assets/denverSkyline.jpg') no-repeat center center/cover;
+    height: 100vh;
+    border-radius: 1em;
+    padding: 1em;
+    left: 0;
+  }
+
+  .techList {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    height: 100px;
+    border: dotted 5px black;
+  }
+
+  .technologies {
+    height: inherit;
+  }
+
+  #techArea, #techRain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .arrow {
+    width: 50px;
+  }
+
+  #techRain {
+    width: 100%;
+  }
+
+  #rainArea {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .rain1 {
+    width: 30px;
+    animation: rain 1.5s linear infinite;
+  }
+
+  .rain2 {
+    width: 30px;
+    animation: rain2 1.60s linear infinite;
+  }
+
+  .rain3 {
+    width: 30px;
+    animation: rain3 1.7s linear infinite;
+  }
+
+  .rain4 {
+    width: 30px;
+    animation: rain4 1.45s linear infinite;
+  }
+
+  /* ANIMATIONS */
+  @keyframes float {
+    0% {
+      bottom: 0em;
+    }
+    100% {
+      bottom: 1em;
+    }
+  }
+
+  @keyframes rain {
+    0% {
+      margin-top: -1em;
+    }
+    80% {
+      opacity: 1
+    }
+    100% {
+      margin-top: 13em;
+      opacity: 0;
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rain2 {
+    0% {
+      margin-top: -1em;
+    }
+    80% {
+      opacity: 1
+    }
+    100% {
+      margin-top: 10em;
+      opacity: 0;
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes rain3 {
+    0% {
+      margin-top: -1em;
+    }
+    80% {
+      opacity: 1
+    }
+    100% {
+      margin-top: 18em;
+      opacity: 0;
+      transform: rotate(180deg);
+    }
+  }
+
+  @keyframes rain4 {
+    0% {
+      margin-top: -1em;
+    }
+    80% {
+      opacity: 1
+    }
+    100% {
+      margin-top: 15em;
+      opacity: 0;
+      transform: rotate(-180deg);
+    }
+  }
+
 }
 
-@keyframes rain {
-  0% {
-    margin-top: -1em;
+/* FOR TABLETS */
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  .App {
+    text-align: center;
   }
-  80% {
-    opacity: 1
-  }
-  100% {
-    margin-top: 13em;
-    opacity: 0;
-    transform: rotate(360deg);
-  }
-}
 
-@keyframes rain2 {
-  0% {
-    margin-top: -1em;
+  p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
   }
-  80% {
-    opacity: 1
-  }
-  100% {
-    margin-top: 10em;
-    opacity: 0;
-    transform: rotate(-360deg);
-  }
-}
 
-@keyframes rain3 {
-  0% {
-    margin-top: -1em;
+  h1, h2, h3, h4, h5 {
+    font-family: 'Shadows Into Light', cursive;
+    /* letter-spacing: 1em; */
+    text-align: center;
   }
-  80% {
-    opacity: 1
-  }
-  100% {
-    margin-top: 18em;
-    opacity: 0;
-    transform: rotate(180deg);
-  }
-}
 
-@keyframes rain4 {
-  0% {
+  h2 {
+    /* letter-spacing: 0.75em; */
     margin-top: -1em;
   }
-  80% {
-    opacity: 1
+
+  /* LANDING */
+  .logo {
+    margin-top: -0.4em;
+    position: fixed;
+    z-index: 3;
+    transition: height 0.5s;
+    /* height: 5% !important; */
   }
-  100% {
-    margin-top: 15em;
-    opacity: 0;
-    transform: rotate(-180deg);
+
+  .nameTitle {
+    /* display: none; */
+    width: 100%;
+    height: inherit;
+    position: fixed;
+    /* z-index: -1; */
+    /* left: 1em; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  #landing {
+    height: 100vh;
+    width: auto;
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    background: url('./assets/chalkboard-background.jpg') no-repeat center center/cover fixed;
+  }
+
+  .chalkboard {
+    display: none;
+  }
+
+  .links {
+    font-family: 'Shadows Into Light', cursive;
+    position: fixed;
+    width: 80%;
+    bottom: 1em;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+  }
+
+  .icons {
+    width: 50px;
+    margin-top: 23px;
+    transition: width 2s, background-color 2s, border-radius 2s, margin-top 2s;
+  }
+
+  .icons:active {
+    width: 65px;
+    background-color: tan;
+    border-radius: 1em;
+    margin-top: 15px;
+  }
+  .downArrow {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    z-index: -2;
+    transform: rotate(90deg);
+    animation: float 1s ease-in-out alternate infinite;
+  }
+
+  /* ABOUT ME  */
+  .about {
+    display: none;
+  }
+
+
+    /* NAVIGATION */
+
+    .navigation {
+      background-color: rgba(100, 100, 100, 0.8);
+      display: flex;
+      position: fixed;
+      width: 100%;
+      height: 75px;
+      align-content: center;
+      justify-content: space-between;
+      z-index: 3;
+      margin-top: -5em;
+      transition: margin-top 0.5s;
+    }
+
+    .navigation p {
+      font-family: 'Shadows Into Light', cursive;
+    }
+
+    .navRight, .navLeft  {
+      margin-top: -10px;
+      width: 40%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a p {
+      font-size: .8em;
+    }
+
+    a p, a h3{
+      padding-left: 10px;
+      padding-right: 5px;
+      color: white;
+      letter-spacing: normal;
+      transition: letter-spacing 0.5s, background-color 0.5s, border-radius 0.5s;
+    }
+
+    a:active p:active, a:active h3:active {
+      letter-spacing: 0.25em;
+      background-color: tan;
+      border-radius: 1em;
+    }
+
+  /* PROJECTS */
+  #projects {
+    display: none;
+  }
+
+  /* TECHNOLOGY */
+  #tech {
+    display: none;
   }
 }
