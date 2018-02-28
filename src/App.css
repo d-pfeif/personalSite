@@ -742,6 +742,7 @@
     right: 0;
     position: absolute;
     background-color: rgb(160, 200, 240);
+    z-index: 0;
   }
 
   .aboutSection {
