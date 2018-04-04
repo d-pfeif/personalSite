@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import './desktop.css';
+import './phone.css';
+import './tablet.css';
 
 // import components
 import AboutMe from "./components/aboutMe.js"

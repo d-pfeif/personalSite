@@ -21,7 +21,7 @@ class Landing extends Component {
         <img style={this.props.logoHeight < 100 ? {height: this.props.logoHeight +"%"} : {height: this.props.logoHeight + "px"}} src={logo} className="logo"/>
         <div className="nameTitle">
           <h1>Dakota Pfeifer</h1>
-          <h2>Software Developer</h2>
+          <h2>Full Stack Developer</h2>
         </div>
         <div className="links" style={{display: this.props.landingLinkDisplay}}>
           <a href="#projects"><h3>Projects</h3></a>
