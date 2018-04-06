@@ -10,12 +10,12 @@
 
   h1, h2, h3, h4, h5 {
     font-family: 'Shadows Into Light', cursive;
-    letter-spacing: 1em;
+    /* letter-spacing: 1em; */
     text-align: center;
   }
 
   h2 {
-    letter-spacing: 0.75em;
+    /* letter-spacing: 0.75em; */
     margin-top: -1em;
   }
 
@@ -215,8 +215,14 @@
     width: 8em;
   }
 
+  .linkArea{
+    display: flex;
+    flex-direction: column;
+  }
+
   .projLinks {
     display: flex;
+    justify-content: space-around;
     flex-direction: row;
     margin-top: -2em;
   }

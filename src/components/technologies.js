@@ -44,7 +44,7 @@ class Technologies extends Component {
   render(){
     return(
       <div id="tech">
-        <h1 style={{textAlign: 'right', marginTop: 3+'em'}}>Technology</h1>
+        <h1 style={{textAlign: 'right', marginTop: 3+'em', marginRight: 5+'em'}}>Technology</h1>
         <div id="techArea">
           <img className="arrow" src={aLeft} alt="Left Arrow" />
           <div className="techList">
