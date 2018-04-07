@@ -26,6 +26,7 @@ class Landing extends Component {
         <div className="links" style={{display: this.props.landingLinkDisplay}}>
           <a href="#projects"><h3>Projects</h3></a>
           <a href="#tech"><h3>Technology</h3></a>
+          <a href="#videoArea"><h3>Videos</h3></a>
           <a href="https://www.linkedin.com/in/d-pfeif/" target="_blank"><img className="icons" src={linkedIn} /></a>
           <a href="https://github.com/d-pfeif" target="_blank"><img className="icons" src={gitHub} /></a>
           <a href={resume} download><h3>Resume</h3></a>
