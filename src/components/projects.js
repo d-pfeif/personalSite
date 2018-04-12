@@ -15,7 +15,7 @@ class Projects extends Component {
       <div id="projects">
         <h1>Projects</h1>
         <div className="projSlideL" style={{marginLeft: this.props.margin1 + "em"}}>
-          <ProjectSlides logo={myViewport} title="MyViewport" description="Built with a Raspberry Pi and integrated with Alexa, this is a smart mirror designed for you!" urllink="https://www.youtube.com/watch?v=-42N0AdAzV8" gitlink="https://github.com/d-pfeif/mySmartMirror"/>
+          <ProjectSlides logo={myViewport} title="MyViewport" description="Built with a Raspberry Pi and integrated with Alexa - this is a smart mirror designed to help the user with their daily activities!" urllink="https://www.youtube.com/watch?v=-42N0AdAzV8" gitlink="https://github.com/d-pfeif/mySmartMirror"/>
         </div>
         <div className="projSlideL" style={{marginLeft: this.props.margin2 + "em"}}>
           <ProjectSlides logo={ghqLogo} title="Galvanize HQ" description="A one-stop-shop for Galvanize students where they can view all resources available to them daily." urllink="https://galvanize-hq.firebaseapp.com/" gitlink="https://github.com/Go-Getters-g64/g-hq"/>
