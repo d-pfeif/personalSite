@@ -4,7 +4,7 @@ class ProjectSlides extends Component{
   render(){
     return(
       <div className="projArea">
-        <img src={this.props.logo} className="projLogo"/>
+        <img alt="Project Logo" src={this.props.logo} className="projLogo"/>
         <div className="projInfo">
           <h3>{this.props.title}</h3>
           <p>{this.props.description}</p>

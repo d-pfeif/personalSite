@@ -19,8 +19,8 @@ class NavBar extends Component {
           <a href="#videoArea"><p>Videos</p></a>
         </div>
         <div className="navRight">
-          <a href="https://www.linkedin.com/in/d-pfeif/" target="_blank"><img className="icons" src={linkedIn} /></a>
-          <a href="https://github.com/d-pfeif" target="_blank"><img className="icons" src={gitHub} /></a>
+          <a href="https://www.linkedin.com/in/d-pfeif/" target="_blank" rel="noopener noreferrer"><img alt="LinkedIn" className="icons" src={linkedIn} /></a>
+          <a href="https://github.com/d-pfeif" target="_blank" rel="noopener noreferrer"><img alt="GitHub" className="icons" src={gitHub} /></a>
           <a href={resume} download><p>Resume</p></a>
         </div>
       </div>

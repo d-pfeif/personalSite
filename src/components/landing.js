@@ -17,8 +17,8 @@ class Landing extends Component {
     return(
       <div id="landing">
         <NavBar navBarMarginTop={this.props.navBarMarginTop} />
-        <img src={chalk} className="chalkboard"/>
-        <img style={this.props.logoHeight < 100 ? {height: this.props.logoHeight +"%"} : {height: this.props.logoHeight + "px"}} src={logo} className="logo"/>
+        <img alt="Chalk Board" src={chalk} className="chalkboard"/>
+        <img alt="d-pfeif logo" style={this.props.logoHeight < 100 ? {height: this.props.logoHeight +"%"} : {height: this.props.logoHeight + "px"}} src={logo} className="logo"/>
         <div className="nameTitle">
           <h1>Dakota Pfeifer</h1>
           <h2>Full Stack Developer</h2>
@@ -27,8 +27,8 @@ class Landing extends Component {
           <a href="#projects"><h3>Projects</h3></a>
           <a href="#tech"><h3>Technology</h3></a>
           <a href="#videoArea"><h3>Videos</h3></a>
-          <a href="https://www.linkedin.com/in/d-pfeif/" target="_blank"><img className="icons" src={linkedIn} /></a>
-          <a href="https://github.com/d-pfeif" target="_blank"><img className="icons" src={gitHub} /></a>
+          <a href="https://www.linkedin.com/in/d-pfeif/" target="_blank" rel="noopener noreferrer"><img alt="linkedIn" className="icons" src={linkedIn} /></a>
+          <a href="https://github.com/d-pfeif" target="_blank" rel="noopener noreferrer"><img alt="GitHub" className="icons" src={gitHub} /></a>
           <a href={resume} download><h3>Resume</h3></a>
         </div>
         <img className="downArrow" src={arrow} style={{display: this.props.arrowDisplay}} alt="arrow" />

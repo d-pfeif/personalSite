@@ -9,7 +9,7 @@ class Videos extends Component{
         <div id="vidDisplay">
           <div style={{display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
             <h2 style={{marginBottom: 0+"em", margin: 1+"em"}}>Programming</h2>
-            <a href="https://www.youtube.com/channel/UCqOyZalfSN_K5_eW3k7sAZw/videos?view_as=subscriber" target="_blank"><h3>View All Breakouts</h3></a>
+            <a href="https://www.youtube.com/channel/UCqOyZalfSN_K5_eW3k7sAZw/videos?view_as=subscriber" target="_blank" rel="noopener noreferrer"><h3>View All Breakouts</h3></a>
           </div>
           <div style={{display: "flex", alignItems: "center"}}>
             <div>
@@ -17,13 +17,13 @@ class Videos extends Component{
             </div>
             <div className="vids">
               <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/xas71K-1AXI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe title="AngularJS Breakout" width="560" height="315" src="https://www.youtube.com/embed/xas71K-1AXI" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
               </div>
               <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/BKnQSDOcHV0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe title="Data Manipulation Breakout" width="560" height="315" src="https://www.youtube.com/embed/BKnQSDOcHV0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
               </div>
               <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/_ZlRqeAetJs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe title="Cupcakes Playhouse" width="560" height="315" src="https://www.youtube.com/embed/_ZlRqeAetJs" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
               </div>
             </div>
             <div>
@@ -33,7 +33,7 @@ class Videos extends Component{
           </div>
           <div style={{display: 'flex', justifyContent: 'space-around', alignItems: 'center'}}>
             <h2 style={{marginBottom: 0+"em", margin: 1+"em"}}>Creativity</h2>
-            <a href="https://www.youtube.com/user/kh2guru/videos?view_as=subscriber" target="_blank"><h3>Doxyc Productions</h3></a>
+            <a href="https://www.youtube.com/user/kh2guru/videos?view_as=subscriber" target="_blank" rel="noopener noreferrer"><h3>Doxyc Productions</h3></a>
           </div>
           <div style={{display: "flex", alignItems: "center"}}>
             <div>
@@ -41,13 +41,13 @@ class Videos extends Component{
             </div>
             <div className="vids">
               <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/B5mRak7FD9E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe title="Graphic Design Promo" width="560" height="315" src="https://www.youtube.com/embed/B5mRak7FD9E" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
               </div>
               <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/JebPTUBDxJ8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe title="Sora and Riku Tribute" width="560" height="315" src="https://www.youtube.com/embed/JebPTUBDxJ8" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
               </div>
               <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/grTipPM73nM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe title="Kingdom Hearts Tribute" width="560" height="315" src="https://www.youtube.com/embed/grTipPM73nM" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
               </div>
             </div>
             <div>

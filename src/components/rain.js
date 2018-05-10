@@ -13,7 +13,7 @@ class Rain extends Component {
   render(){
     return(
       <div>
-        <img className={this.state.rain} src={this.state.logo} />
+        <img alt="rain" className={this.state.rain} src={this.state.logo} />
       </div>
     )
   }

@@ -23,6 +23,7 @@ class App extends Component {
       project2Margin: -150,
       project3Margin: -150,
       project4Margin: -150,
+      project5Margin: -150,
       rainDisplay: 'none',
       arrowDisplay: 'block'
     }
@@ -33,6 +34,7 @@ class App extends Component {
     this.projectFlyIn2 = this.projectFlyIn2.bind(this)
     this.projectFlyIn3 = this.projectFlyIn3.bind(this)
     this.projectFlyIn4 = this.projectFlyIn4.bind(this)
+    this.projectFlyIn5 = this.projectFlyIn5.bind(this)
     this.displayRain = this.displayRain.bind(this)
   }
 
@@ -43,12 +45,12 @@ class App extends Component {
     window.addEventListener('scroll', this.projectFlyIn2)
     window.addEventListener('scroll', this.projectFlyIn3)
     window.addEventListener('scroll', this.projectFlyIn4)
+    window.addEventListener('scroll', this.projectFlyIn5)
     window.addEventListener('scroll', this.displayRain)
   }
 
   logoSizeChange() {
     let Y = window.innerHeight / 1.75
-    let X = window.innerHeight
     if (window.scrollY > Y) {
       this.setState({logoHeight: 175, arrowDisplay: 'none', navBarMarginTop: 0})
     } else {
@@ -105,8 +107,18 @@ class App extends Component {
     }
   }
 
+  projectFlyIn5() {
+    let multiplier = 3.25
+    let Y = window.innerHeight * multiplier
+    if (window.scrollY > Y) {
+      this.setState({project5Margin: 0})
+    } else {
+      this.setState({project5Margin: -150})
+    }
+  }
+
   displayRain() {
-    let multiplier = 3.1
+    let multiplier = 3.55
     let Y = window.innerHeight * multiplier
     if (window.scrollY > Y) {
       this.setState({rainDisplay: 'flex'})
@@ -120,7 +132,7 @@ class App extends Component {
       <div className="App">
         <Landing logoHeight={this.state.logoHeight} navBarMarginTop={this.state.navBarMarginTop} landingLinkDisplay={this.state.landingLinkDisplay} arrowDisplay={this.state.arrowDisplay}/>
         <AboutMe />
-        <Projects margin1={this.state.project1Margin} margin2={this.state.project2Margin} margin3={this.state.project3Margin} margin4={this.state.project4Margin} />
+        <Projects margin1={this.state.project1Margin} margin2={this.state.project2Margin} margin3={this.state.project3Margin} margin4={this.state.project4Margin} margin5={this.state.project5Margin} />
         <Technologies rainDisplay={this.state.rainDisplay} />
         <Videos />
       </div>

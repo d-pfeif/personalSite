@@ -5,7 +5,7 @@ class AboutMe extends Component {
   render(){
     return(
       <div className="about">
-        <img src={myFace} className="myFace" />
+        <img alt="Dakota" src={myFace} className="myFace" />
         <div className="aboutSection">
           <h2>ABOUT ME</h2>
           <p><i>Wheresoever you go, go with all your heart.</i> -Confucius</p>
